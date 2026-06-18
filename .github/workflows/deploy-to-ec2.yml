@@ -17,7 +17,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
         ARGS: "-rltgoDzvO"
         SOURCE: "./"
-        REMOTE_HOST: "assistenciatecnica.duckdns.org"
+        REMOTE_HOST: "54.91.66.183"
         REMOTE_USER: "ubuntu"
         TARGET: "/var/www/html/assistec/"
         EXCLUDE: "/vendor/, /node_modules/, .env, /storage/logs/, /storage/framework/"
