@@ -13,12 +13,15 @@ class EquipamentController extends Controller
         $search = request('search');
 
         if ($search) {
-            $equipaments = Equipament::where([
-                ('cliente', 'like', '%' . $search . '%')->orWhere('tipo', 'like', '%' . $search . '%')->orWhere('marca', 'like', '%' . $search . '%')->orWhere('status', 'like', '%' . $search . '%')
-            ])->get();
+            $equipaments = Equipament::where('cliente', 'like', '%' . $search . '%')
+            ->orWhere('tipo', 'like', '%' . $search . '%')
+            ->orWhere('marca', 'like', '%' . $search . '%')
+            ->orWhere('status', 'like', '%' . $search . '%')
+            ->get();    
         } else {
-            $equipaments = Equipament::all();
+             $equipaments = Equipament::all();
         }
+
 
        return view('welcome', ['equipaments' => $equipaments, 'search' => $search]);
     }
