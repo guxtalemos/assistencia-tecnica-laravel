@@ -9,11 +9,8 @@ Route::get('/', [EquipamentController::class, 'index']);
 Route::get('/equipaments/create', [EquipamentController::class, 'create'])->middleware('auth');
 Route::get('/equipaments/{id}', [EquipamentController::class, 'show']);
 Route::post('/equipaments', [EquipamentController::class, 'store']);
-Route::middleware(['auth:sanctum', 'verified'
-])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
 
+Route:get('dashboard', [EquipamentController::class, 'dashboard'])->middleware('auth');
 
 Route::get('/equipaments/{id}/edit', [EquipamentController::class, 'edit'])->middleware('auth');
 Route::put('/equipaments/{id}', [EquipamentController::class, 'update'])->middleware('auth');

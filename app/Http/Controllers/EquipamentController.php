@@ -64,4 +64,35 @@ class EquipamentController extends Controller
 
         return view('equipaments.show', ['equipament' => $equipament]);
     }
+
+    public function dashboard()
+    {
+        $user = auth()->user();
+        $equipaments = $user->equipaments;
+
+        return view('equipaments.dashboard', ['equipaments' => $equipaments]);
+    }
+
+    public function destroy($id)
+    {
+        Equipament::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg', 'Equipamento excluído com sucesso!');
+    }
+
+    public function edit($id)
+    {
+        $equipament = Equipament::findOrFail($id);
+
+        return view('equipaments.edit', ['equipament' => $equipament]);
+    }
+
+    public function update(Request $request)
+
+    {
+        Equipament::findOrFail($request->id)->update($request->all());
+
+        return redirect('/')->with('msg', 'Equipamento atualizado com sucesso!');
+    }
+
 }

@@ -273,3 +273,16 @@ body {
 .custom-table tbody tr:hover td:first-child {
     border-left-color: #0f4c81;
 }
+
+/* ==========================================
+                    DASHBOARD        
+   ========================================== */
+
+.dashoard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-equipaments-container {
+    width: 25%;
+}
