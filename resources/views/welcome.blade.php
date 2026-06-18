@@ -77,18 +77,18 @@
                 </div>
             @endforeach
 
-            @if (count($equipaments) == 0 && $search){
+            @if ($equipaments->isEmpty() && $search)
                 <div class="col-12 text-center py-5">
-                    <p class="text-muted fs-5">Não encontrei nenhum resultado com a palavra {{ $search }}! <a href="/"> Ver todos</p>
+                    <p class="text-muted fs-5">
+                        Não encontrei nenhum resultado com a palavra "{{ $search }}"!
+                        <a href="/" class="text-primary fw-bold">Ver todos</a>
+                    </p>
                 </div>
-            }
-            @elseif (count($equipaments) == 0)
+            @elseif ($equipaments->isEmpty())
                 <div class="col-12 text-center py-5">
                     <p class="text-muted fs-5">Não há equipamentos cadastrados no momento.</p>
                 </div>
             @endif
-
-
         </div>
     </div>
 
