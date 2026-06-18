@@ -79,12 +79,12 @@
 
             @if (count($equipaments) == 0 && $search){
                 <div class="col-12 text-center py-5">
-                    <p class="text-muted fs-5">Não foi possível encontrar nenhum retorno com {{ $search }}! <a href="/"> Ver todos.</p>
+                    <p class="text-muted fs-5">Não encontrei nenhum resultado com a palavra {{ $search }}! <a href="/"> Ver todos</p>
                 </div>
             }
             @elseif (count($equipaments) == 0)
                 <div class="col-12 text-center py-5">
-                    <p class="text-muted fs-5">Não há registros de equipamentos disponíveis</p>
+                    <p class="text-muted fs-5">Não há equipamentos cadastrados no momento.</p>
                 </div>
             @endif
 
