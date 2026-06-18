@@ -88,10 +88,21 @@ class EquipamentController extends Controller
         return view('equipaments.edit', ['equipament' => $equipament]);
     }
 
-    public function update(Request $request)
-
+    public function update(Request $request)    
     {
-        Equipament::findOrFail($request->id)->update($request->all());
+
+        $data = $request->all();
+
+        // Upload da imagem
+        if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+            $requestImage = $request->imagem;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
+            $requestImage->move(public_path('img/equipaments'), $imageName);
+            $data['image'] = $imageName;
+        }
+
+        Equipament::findOrFail($request->id)->update($data);
 
         return redirect('/')->with('msg', 'Equipamento atualizado com sucesso!');
     }

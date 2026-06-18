@@ -14,6 +14,8 @@ class Equipament extends Model
         'date' => 'datetime:d/m/Y'
     ];
 
+    protected $guarded = [];
+
     public function user()
     {
         return $this->belongsTo('App\Models\User');
