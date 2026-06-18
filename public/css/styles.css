@@ -278,11 +278,11 @@ body {
                     DASHBOARD        
    ========================================== */
 
-.dashoard-title-container {
+.dashboard-title-container {
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
-.dashboard-equipaments-container {
+.dashboard-equipaments-container th {
     width: 25%;
 }

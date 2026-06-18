@@ -68,6 +68,7 @@ class EquipamentController extends Controller
     public function dashboard()
     {
         $user = auth()->user();
+        
         $equipaments = $user->equipaments;
 
         return view('equipaments.dashboard', ['equipaments' => $equipaments]);
