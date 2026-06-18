@@ -10,7 +10,7 @@ Route::get('/equipaments/create', [EquipamentController::class, 'create'])->midd
 Route::get('/equipaments/{id}', [EquipamentController::class, 'show']);
 Route::post('/equipaments', [EquipamentController::class, 'store']);
 
-Route:get('dashboard', [EquipamentController::class, 'dashboard'])->middleware('auth');
+Route::get('dashboard', [EquipamentController::class, 'dashboard'])->middleware('auth');
 
 Route::get('/equipaments/{id}/edit', [EquipamentController::class, 'edit'])->middleware('auth');
 Route::put('/equipaments/{id}', [EquipamentController::class, 'update'])->middleware('auth');
