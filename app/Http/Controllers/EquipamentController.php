@@ -39,9 +39,7 @@ class EquipamentController extends Controller
         $equipament->tipo = $request->tipo;
         $equipament->marca = $request->marca;
         $equipament->status = $request->status;
-        $equipament->imagem = $request->imagem;
         $equipament->defeito = $request->defeito;
-        $
 
         // Upload da imagem
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
