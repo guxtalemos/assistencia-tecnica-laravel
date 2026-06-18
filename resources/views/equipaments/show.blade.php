@@ -53,7 +53,7 @@
                 <div class="card-body p-4 p-md-5">
                     
                     <div id="description-container" class="mb-5">
-                        <h3 class="fw-bold text-dark mb-3">Defeito Relatado / Sintomas:</h3>
+                        <h3 class="fw-bold text-dark mb-3">Defeito Relatado:</h3>
                         <p class="text-muted leading-relaxed p-3 bg-light rounded-2 border-start border-4 border-primary">
                             {{ $equipament->defeito }}
                         </p>
