@@ -10,9 +10,17 @@ class EquipamentController extends Controller
 {
     public function index()
     {
-        $equipaments = Equipament::all();
+        $search = request('search');
 
-        return view('welcome', ['equipaments' => $equipaments]);
+        if ($search) {
+            $equipaments = Equipament::where([
+                ('cliente', 'like', '%' . $search . '%')->orWhere('tipo', 'like', '%' . $search . '%')->orWhere('marca', 'like', '%' . $search . '%')->orWhere('status', 'like', '%' . $search . '%')
+            ])->get();
+        } else {
+            $equipaments = Equipament::all();
+        }
+
+       return view('welcome', ['equipaments' => $equipaments, 'search' => $search]);
     }
 
     public function create()
