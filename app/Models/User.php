@@ -46,4 +46,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function equipaments()
+    {
+        return $this->hasMany('App\Models\Equipament');
+    }
 }

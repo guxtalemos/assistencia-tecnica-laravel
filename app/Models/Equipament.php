@@ -13,4 +13,9 @@ class Equipament extends Model
        
         'date' => 'datetime:d/m/Y'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

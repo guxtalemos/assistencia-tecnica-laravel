@@ -41,6 +41,7 @@ class EquipamentController extends Controller
         $equipament->status = $request->status;
         $equipament->imagem = $request->imagem;
         $equipament->defeito = $request->defeito;
+        $
 
         // Upload da imagem
         if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
@@ -50,6 +51,9 @@ class EquipamentController extends Controller
             $requestImage->move(public_path('img/equipaments'), $imageName);
             $equipament->imagem = $imageName;
         }
+
+        $user = auth()->user();
+        $equipament->user_id = $user->id;
 
         $equipament->save();
 
