@@ -36,7 +36,7 @@
             <div class="action-buttons-wrapper d-flex gap-2">
                 @auth
                     <a href="/equipaments/edit/{{ $equipament->id }}" class="btn btn-primary px-4 py-2 flex-grow-1 fw-medium">Editar Informações</a>
-                    <form action="/equipaments/{{ $equipament->id }}" method="POST" class="flex-grow-1" onsubmit="return confirm('Tem certeza que deseja excluir esta O.S.?')">
+                    <form action="/equipaments/{{ $equipament->id }}" method="POST" class="flex-grow-1" onsubmit="return confirm('Tem certeza que deseja excluir este equipamento?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-outline-danger w-100 py-2 fw-medium">Excluir Registro</button>

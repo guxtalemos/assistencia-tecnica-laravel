@@ -286,3 +286,7 @@ body {
 .dashboard-equipaments-container th {
     width: 25%;
 }
+
+.dashboard-equipaments-container form {
+    display: inline-block;
+}

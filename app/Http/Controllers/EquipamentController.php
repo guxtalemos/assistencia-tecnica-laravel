@@ -68,7 +68,7 @@ class EquipamentController extends Controller
     public function dashboard()
     {
         $user = auth()->user();
-        
+
         $equipaments = $user->equipaments;
 
         return view('equipaments.dashboard', ['equipaments' => $equipaments]);
@@ -78,7 +78,7 @@ class EquipamentController extends Controller
     {
         Equipament::findOrFail($id)->delete();
 
-        return redirect('/')->with('msg', 'Equipamento excluído com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Equipamento excluído com sucesso!');
     }
 
     public function edit($id)
