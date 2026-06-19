@@ -28,8 +28,7 @@
                             <td scope="row">{{ $loop->index + 1 }}</td>
                             <td scope="row">{{ $manutencao->tecnico }}</td>
                             <td>
-
-                                    {{ $manutencao->equipamento->marca ?? 'Marca' }} - {{ $manutencao->equipamento->tipo ?? 'Tipo' }}
+                                {{ $manutencao->equipamento->marca ?? 'Marca' }} - {{ $manutencao->equipamento->tipo ?? 'Tipo' }}
                             </td>
                             <td scope="row">{{ \Carbon\Carbon::parse($manutencao->data_entrada)->format('d/m/Y') }}</td>
                             <td>

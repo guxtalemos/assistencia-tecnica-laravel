@@ -13,8 +13,8 @@ Route::delete('/equipaments/{id}', [EquipamentController::class, 'destroy'])->mi
 Route::get('/equipaments/edit/{id}', [EquipamentController::class, 'edit'])->middleware('auth');
 Route::put('/equipaments/update/{id}', [EquipamentController::class, 'update'])->middleware('auth');
 
-Route::get('dashboard', [EquipamentController::class, 'dashboard'])->middleware('auth');
-Route::get('dashboard', [ManutencaoController::class, 'dashboard'])->middleware('auth');
+Route::get('/equipaments/dashboard', [EquipamentController::class, 'dashboard'])->middleware('auth');
+Route::get('/manutencoes/dashboard', [ManutencaoController::class, 'dashboard'])->middleware('auth');
 
 Route::get('/manutencoes', [ManutencaoController::class, 'index']);
 Route::get('/manutencoes/create', [ManutencaoController::class, 'create'])->middleware('auth');
