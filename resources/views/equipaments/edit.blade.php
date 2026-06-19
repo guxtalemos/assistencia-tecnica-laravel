@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="marca" class="form-label fw-semibold text-secondary">Marca / Fabricante:</label>
+                            <label for="marca" class="form-label fw-semibold text-secondary"> Fabricante:</label>
                             <input type="text" class="form-control border-2 shadow-none" id="marca" name="marca"
                                 placeholder="Ex: Samsung, Lenovo, Sony" required value="{{ $equipament->marca }}">
                         </div>
