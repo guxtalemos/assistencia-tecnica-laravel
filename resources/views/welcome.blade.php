@@ -5,7 +5,7 @@
 @section('content')
 
     <div id="search-container" class="col-md-12 text-center py-5 backend-search-bg">
-        <h1 class="fw-bold mb-3">Controle de Ordens de Serviço</h1>
+        <h1 class="fw-bold mb-3">Controle de Equipamentos</h1>
         <form action="/" method="GET" class="d-flex justify-content-center">
             <div class="input-group search-bar-box">
                 <span class="input-group-text bg-white border-end-0 text-muted">
@@ -23,15 +23,8 @@
                 <h2 class="fw-bold text-dark m-0">Resultados da busca por: <span
                         class="fw-bold text-dark">{{ $search }}</span></h2>
             </div>
-        @else
-            <div>
-                <p class="subtitle text-muted m-0">Acompanhe o status e atualizações dos aparelhos na oficina</p>
-            </div>
         @endif
-        <div class="d-flex justify-content-between align-items-center mb-4">
-
-        </div>
-
+  
         <div id="cards-container" class="row g-4">
 
             @foreach ($equipaments as $equipament)
