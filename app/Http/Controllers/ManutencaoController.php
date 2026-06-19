@@ -55,6 +55,13 @@ class ManutencaoController extends Controller
         return view('manutencoes.show', ['manutencao' => $manutencao]);
     }
 
+    public function dashboard()
+    {
+        $manutencoes = Manutencao::with('equipamento')->get();
+        
+        return view('manutencoes.dashboard', ['manutencoes' => $manutencoes]);
+    }
+
     public function destroy($id)
     {
         Manutencao::findOrFail($id)->delete();

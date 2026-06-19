@@ -8,7 +8,6 @@
     <div class="row g-5">
         
         <div id="image-container" class="col-lg-6">
-            {{-- Puxa a imagem do equipamento vinculado a esta manutenção --}}
             @if($manutencao->equipamento && $manutencao->equipamento->imagem)
                 <img src="/img/equipaments/{{ $manutencao->equipamento->imagem }}" class="img-fluid rounded-3 shadow-sm equipment-detail-img" alt="{{ $manutencao->equipamento->tipo }}">
             @else
@@ -36,7 +35,6 @@
 
             <div class="action-buttons-wrapper d-flex gap-2">
                 @auth
-                    {{-- Aponta para as rotas de manutenção --}}
                     <a href="/manutencoes/edit/{{ $manutencao->id }}" class="btn btn-primary px-4 py-2 flex-grow-1 fw-medium">Editar Manutenção</a>
                     <form action="/manutencoes/{{ $manutencao->id }}" method="POST" class="flex-grow-1" onsubmit="return confirm('Tem certeza que deseja excluir este registro de manutenção?')">
                         @csrf

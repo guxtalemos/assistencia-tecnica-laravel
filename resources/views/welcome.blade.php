@@ -10,7 +10,7 @@
         <form action="/" method="GET" class="d-flex justify-content-center">
             <div class="input-group search-bar-box">
                 <span class="input-group-text bg-white border-end-0 text-muted">
-                    O
+                    <ion-icon name="search-outline"></ion-icon>
                 </span>
                 <input type="text" id="search" name="search" class="form-control border-start-0 ps-0 shadow-none"
                     placeholder="Procurar cliente ou aparelho...">
@@ -30,7 +30,7 @@
             </div>
         @endif
         <div class="d-flex justify-content-between align-items-center mb-4">
-            
+
         </div>
 
         <div id="cards-container" class="row g-4">
