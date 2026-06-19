@@ -30,9 +30,7 @@
             </div>
         @endif
         <div class="d-flex justify-content-between align-items-center mb-4">
-            @auth
-                <a href="/equipaments/create" class="btn btn-primary px-4 fw-medium">Novo Registro</a>
-            @endauth
+            
         </div>
 
         <div id="cards-container" class="row g-4">
@@ -63,7 +61,7 @@
                             <h5 class="card-title fw-bold text-dark mb-2">{{ $equipament->cliente }}</h5>
 
                             <p class="card-text text-muted flex-grow-1 fs-6">
-                                <strong>Defeito:</strong> {{ Str::limit($equipament->defeito, 60) }}
+                                <strong>Defeito:</strong> {{ $equipament->defeito }}
                             </p>
 
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">

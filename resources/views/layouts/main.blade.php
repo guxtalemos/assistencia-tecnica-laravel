@@ -19,7 +19,7 @@
         <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center px-4">
 
             <a class="navbar-brand fs-4 text-dark fw-normal" href="/">
-                Assistência Técnica
+                Assistência Técnica GK
             </a>
 
             <nav>
