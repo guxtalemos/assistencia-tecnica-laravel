@@ -31,6 +31,16 @@
                         </div>
 
                         <div class="form-group col-md-6">
+                            <label for="tecnico" class="form-label fw-semibold text-secondary">Técnico Responsável:</label>
+                            <select name="tecnico" id="tecnico" class="form-select border-2 shadow-none" required>
+                                <option value="">Selecione o Técnico</option>
+                                @foreach ($tecnicos as $tecnico)
+                                    <option value="{{ $tecnico->name }}">{{ $tecnico->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6">
                             <label for="data_entrada" class="form-label fw-semibold text-secondary">Data de Entrada:</label>
                             <input type="date" class="form-control border-2 shadow-none" id="data_entrada"
                                 name="data_entrada" placeholder="Ex: Samsung, Lenovo, Sony" value="{{ date('Y-m-d') }}" required>
