@@ -15,6 +15,7 @@ Route::put('/equipaments/update/{id}', [EquipamentController::class, 'update'])-
 
 Route::get('dashboard', [EquipamentController::class, 'dashboard'])->middleware('auth');
 
+Route::get('/manutencoes', [ManutencaoController::class, 'index']);
 Route::get('/manutencoes/create', [ManutencaoController::class, 'create'])->middleware('auth');
 Route::get('/manutencoes/{id}', [ManutencaoController::class, 'show']);
 Route::post('/manutencoes', [ManutencaoController::class, 'store']);
