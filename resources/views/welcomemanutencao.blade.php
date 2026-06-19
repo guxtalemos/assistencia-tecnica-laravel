@@ -6,14 +6,13 @@
 
     <div id="search-container" class="col-md-12 text-center py-5 backend-search-bg">
         <h1 class="fw-bold mb-3">Controle de Manutenções</h1>
-        <p class="text-muted mb-4">Busque por técnico responsável ou palavras nas observações</p>
         <form action="/manutencoes" method="GET" class="d-flex justify-content-center">
             <div class="input-group search-bar-box">
                 <span class="input-group-text bg-white border-end-0 text-muted">
                     <ion-icon name="search-outline"></ion-icon>
                 </span>
                 <input type="text" id="search" name="search" class="form-control border-start-0 ps-0 shadow-none"
-                    placeholder="Procurar técnico ou observação..." value="{{ $search }}">
+                    placeholder="Busque por técnico responsável ou palavras nas observações" value="{{ $search }}">
             </div>
         </form>
     </div>

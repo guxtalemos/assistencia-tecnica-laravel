@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="col-md-10 offset-md-1 dashboard-title-container mt-4">
-        <h1>Minhas Manutenções</h1>
+        <h1>Manutenções Cadastradas</h1>
     </div>
 
     <div class="col-md-10 offset-md-1 dashboard-equipaments-container">

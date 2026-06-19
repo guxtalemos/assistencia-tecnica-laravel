@@ -31,10 +31,10 @@
                     </li>
                     @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="/equipaments/dashboard">Meus Equipamentos</a>
+                            <a class="nav-link" href="/equipaments/dashboard">Equipamentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/manutencoes/dashboard">Minhas Manutenções</a>
+                            <a class="nav-link" href="/manutencoes">Manutenções</a>
                         </li>
                         <li class="nav-item">
                             <form action="/logout" method="POST" class="d-inline">

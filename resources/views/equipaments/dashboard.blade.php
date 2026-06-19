@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="col-md-10 offset-md-1 dashboard-title-container">
-        <h1>Meus Equipamentos</h1>
+        <h1>Equipamentos Cadastrados</h1>
     </div>
 
     <div class="col-md-10 offset-md-1 dashboard-equipaments-container">
@@ -18,7 +18,7 @@
                         <th scope="col">Cliente</th>
                         <th scope="col">Equipamento</th>
                         <th scope="col">Defeito</th>
-                        <th scope="col"></th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
