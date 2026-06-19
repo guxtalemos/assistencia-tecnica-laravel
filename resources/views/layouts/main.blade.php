@@ -34,6 +34,9 @@
                             <a class="nav-link" href="/dashboard">Meus Equipamentos</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">Minhas Manutenções</a>
+                        </li>
+                        <li class="nav-item">
                             <form action="/logout" method="POST" class="d-inline">
                                 @csrf
                                 <a href="/logout" class="nav-link"
