@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header class="border-bottom py-2 bg-white">
         <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center px-4">
 
@@ -58,7 +58,7 @@
         </div>
     </header>
 
-    <main class="container-fluid">
+    <main class="container-fluid flex-grow-1">
         <div class="row">
             <div class="col-12">
                 @if (session('msg'))
