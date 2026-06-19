@@ -28,7 +28,7 @@
                         <a class="nav-link" href="/equipaments/create">Cadastrar Equipamento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/manutencoes">Manutenções</a>
+                        <a class="nav-link" href="/manutencoes/create">Cadastrar Manutenção</a>
                     </li>
                     @auth
                         <li class="nav-item">
