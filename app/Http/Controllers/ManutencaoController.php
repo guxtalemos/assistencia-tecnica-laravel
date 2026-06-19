@@ -23,7 +23,7 @@ class ManutencaoController extends Controller
             $manutencoes = Manutencao::with('equipamento')->get();
         }
 
-        return view('welcomemanutencoes', ['manutencoes' => $manutencoes, 'search' => $search]);
+        return view('welcomemanutencao', ['manutencoes' => $manutencoes, 'search' => $search]);
     }
 
     public function create()
