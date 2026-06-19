@@ -7,7 +7,6 @@
     <div id="search-container" class="col-md-12 text-center py-5 backend-search-bg">
         <h1 class="fw-bold mb-3">Controle de Manutenções</h1>
         <p class="text-muted mb-4">Busque por técnico responsável ou palavras nas observações</p>
-        {{-- O action agora aponta para a rota de manutenções --}}
         <form action="/manutencoes" method="GET" class="d-flex justify-content-center">
             <div class="input-group search-bar-box">
                 <span class="input-group-text bg-white border-end-0 text-muted">
@@ -41,7 +40,6 @@
                     <div class="card equipment-card shadow-sm border-0 w-100 d-flex flex-column">
 
                         <div class="card-img-wrapper">
-                            {{-- Puxa a imagem do equipamento relacionado --}}
                             @if ($manutencao->equipamento && $manutencao->equipamento->imagem)
                                 <img src="/img/equipaments/{{ $manutencao->equipamento->imagem }}" class="card-img-top"
                                     alt="{{ $manutencao->equipamento->tipo }}">
@@ -52,14 +50,12 @@
                                 </div>
                             @endif
 
-                            {{-- Mostra o nome do técnico como uma badge --}}
                             <span class="badge status-badge bg-dark">
                                 Técnico: {{ $manutencao->tecnico }}
                             </span>
                         </div>
 
                         <div class="card-body d-flex flex-column p-4">
-                            {{-- Informações do equipamento --}}
                             <span class="text-primary text-uppercase fs-7 fw-bold mb-1">
                                 {{ $manutencao->equipamento->marca ?? 'Desconhecido' }} —
                                 {{ $manutencao->equipamento->tipo ?? 'Desconhecido' }}
@@ -68,18 +64,15 @@
                                 Cliente: {{ $manutencao->equipamento->cliente ?? 'Não informado' }}
                             </h5>
 
-                            {{-- Observações da manutenção --}}
                             <p class="card-text text-muted flex-grow-1 fs-6">
                                 <strong>Observações:</strong>
                                 {{ $manutencao->observacoes ?: 'Nenhuma observação registrada.' }}
                             </p>
 
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
-                                {{-- Formata a data de entrada usando o Carbon do Laravel --}}
                                 <span class="text-muted fs-7">
                                     {{ \Carbon\Carbon::parse($manutencao->data_entrada)->format('d/m/Y') }}
                                 </span>
-                                {{-- Botão para a página de detalhes/show --}}
                                 <a href="/manutencoes/{{ $manutencao->id }}"
                                     class="btn btn-outline-primary btn-sm px-3 fw-medium">Gerenciar</a>
                             </div>
