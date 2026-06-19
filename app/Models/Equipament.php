@@ -20,4 +20,9 @@ class Equipament extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
+
+    public function manutencoes()
+    {
+        return $this->hasMany(Manutencao::class, 'equipamento_id');
+    }
 }

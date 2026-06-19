@@ -15,7 +15,6 @@
             <table class="table mt-4">
                 <thead>
                     <tr>
-                        <th scope="col">Qtd</th>
                         <th scope="col">Técnico</th>
                         <th scope="col">Equipamento</th>
                         <th scope="col">Data de Entrada</th>
@@ -25,7 +24,6 @@
                 <tbody>
                     @foreach ($manutencoes as $manutencao)
                         <tr>
-                            <td scope="row">{{ $loop->index + 1 }}</td>
                             <td scope="row">{{ $manutencao->tecnico }}</td>
                             <td>
                                 {{ $manutencao->equipamento->marca ?? 'Marca' }} -

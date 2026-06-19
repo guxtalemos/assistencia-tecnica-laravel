@@ -15,7 +15,6 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Qtd</th>
                         <th scope="col">Cliente</th>
                         <th scope="col">Equipamento</th>
                         <th scope="col">Defeito</th>
@@ -25,7 +24,6 @@
                 <tbody>
                     @foreach ($equipaments as $equipament)
                         <tr>
-                            <td scope="row">{{ $loop->index + 1 }}</td>
                             <td scope="row">{{ $equipament->cliente }}</a></td>
                             <td><a href="/equipaments/{{ $equipament->id }}">{{ $equipament->tipo }}</a></td>
                             <td scope="row">{{ $equipament->defeito }}</a></td>

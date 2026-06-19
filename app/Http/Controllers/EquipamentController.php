@@ -60,7 +60,8 @@ class EquipamentController extends Controller
 
     public function show($id)
     {
-        $equipament = Equipament::findOrFail($id);
+        
+        $equipament = Equipament::with('manutencoes')->findOrFail($id);
 
         return view('equipaments.show', ['equipament' => $equipament]);
     }
