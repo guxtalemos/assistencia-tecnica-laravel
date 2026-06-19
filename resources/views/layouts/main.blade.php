@@ -18,7 +18,7 @@
         <div class="container-fluid d-flex flex-wrap justify-content-between align-items-center px-4">
 
             <a class="navbar-brand fs-4 text-dark fw-normal" href="/">
-                Assistência Técnica GK
+                AssisTEC GK
             </a>
 
             <nav>
@@ -69,7 +69,7 @@
     </main>
 
     <footer class="border-top py-3 text-center text-muted mt-5">
-        <p class="mb-0">Sistema de Assistência Técnica &copy; 2026</p>
+        <p class="mb-0"> AssisTEC GK &copy; 2026</p>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

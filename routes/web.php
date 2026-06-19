@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EquipamentController;
 use App\Http\Controllers\ManutencaoController;
 
+Route::redirect('/dashboard', '/equipaments/dashboard');
+
 Route::get('/', [EquipamentController::class, 'index']);
 
 Route::get('/equipaments/create', [EquipamentController::class, 'create'])->middleware('auth');
