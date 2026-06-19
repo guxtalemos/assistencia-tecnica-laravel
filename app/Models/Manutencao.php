@@ -25,5 +25,4 @@ class Manutencao extends Model
         // Se o seu model de equipamentos se chamar Equipament, use Equipament::class
         return $this->belongsTo(Equipament::class, 'equipamento_id'); 
     }
-
 }

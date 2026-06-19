@@ -17,7 +17,8 @@
                     @csrf
 
                     <div class="row g-4">
-                        <div class="form-group col-md-6">
+
+                        <div class="form-group col-md-12">
                             <label for="equipamento_id" class="form-label fw-semibold text-secondary">Equipamento:</label>
                             <select name="equipamento_id" id="equipamento_id" class="form-select border-2 shadow-none"
                                 required>
@@ -43,7 +44,8 @@
                         <div class="form-group col-md-6">
                             <label for="data_entrada" class="form-label fw-semibold text-secondary">Data de Entrada:</label>
                             <input type="date" class="form-control border-2 shadow-none" id="data_entrada"
-                                name="data_entrada" placeholder="Ex: Samsung, Lenovo, Sony" value="{{ date('Y-m-d') }}" required>
+                                name="data_entrada" placeholder="Ex: Samsung, Lenovo, Sony" value="{{ date('Y-m-d') }}"
+                                required>
                         </div>
 
                         <div class="form-group col-md-12">
