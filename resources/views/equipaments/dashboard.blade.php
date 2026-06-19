@@ -29,14 +29,19 @@
                             <td scope="row">{{ $equipament->cliente }}</a></td>
                             <td><a href="/equipaments/{{ $equipament->id }}">{{ $equipament->tipo }}</a></td>
                             <td scope="row">{{ $equipament->defeito }}</a></td>
-                            <td>
-                                <a href="/equipaments/edit/{{ $equipament->id }}" class="btn btn-info btn-edit"> <ion-icon
-                                        name="create-outline"></ion-icon> Editar</a>
-                                <form action="/equipaments/{{ $equipament->id }}" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este equipamento?')">
+
+                            <td class="d-flex gap-2">
+                                <a href="/equipaments/edit/{{ $equipament->id }}" class="btn btn-info btn-edit">
+                                    <ion-icon name="create-outline"></ion-icon> Editar
+                                </a>
+
+                                <form action="/equipaments/{{ $equipament->id }}" method="POST"
+                                    onsubmit="return confirm('Tem certeza que deseja excluir esta manutenção?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger delete-btn"> <ion-icon
-                                            name="trash-outline"></ion-icon> Deletar</button>
+                                    <button type="submit" class="btn btn-danger delete-btn">
+                                        <ion-icon name="trash-outline"></ion-icon> Deletar
+                                    </button>
                                 </form>
                             </td>
                         </tr>

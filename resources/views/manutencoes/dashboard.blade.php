@@ -28,17 +28,20 @@
                             <td scope="row">{{ $loop->index + 1 }}</td>
                             <td scope="row">{{ $manutencao->tecnico }}</td>
                             <td>
-                                {{ $manutencao->equipamento->marca ?? 'Marca' }} - {{ $manutencao->equipamento->tipo ?? 'Tipo' }}
+                                {{ $manutencao->equipamento->marca ?? 'Marca' }} -
+                                {{ $manutencao->equipamento->tipo ?? 'Tipo' }}
                             </td>
                             <td scope="row">{{ \Carbon\Carbon::parse($manutencao->data_entrada)->format('d/m/Y') }}</td>
-                            <td>
-                                <a href="/manutencoes/edit/{{ $manutencao->id }}" class="btn btn-info btn-edit"> 
+                            <td class="d-flex gap-2">
+                                <a href="/manutencoes/edit/{{ $manutencao->id }}" class="btn btn-info btn-edit">
                                     <ion-icon name="create-outline"></ion-icon> Editar
                                 </a>
-                                <form action="/manutencoes/{{ $manutencao->id }}" method="POST" class="d-inline" onsubmit="return confirm('Tem certeza que deseja excluir esta manutenção?')">
+
+                                <form action="/manutencoes/{{ $manutencao->id }}" method="POST"
+                                    onsubmit="return confirm('Tem certeza que deseja excluir esta manutenção?')">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger delete-btn"> 
+                                    <button type="submit" class="btn btn-danger delete-btn">
                                         <ion-icon name="trash-outline"></ion-icon> Deletar
                                     </button>
                                 </form>
@@ -48,7 +51,8 @@
                 </tbody>
             </table>
         @else
-            <p class="mt-4">Você ainda não tem manutenções cadastradas, <a href="/manutencoes/create">Cadastrar Manutenção </a></p>
+            <p class="mt-4">Você ainda não tem manutenções cadastradas, <a href="/manutencoes/create">Cadastrar Manutenção
+                </a></p>
         @endif
 
     </div>
